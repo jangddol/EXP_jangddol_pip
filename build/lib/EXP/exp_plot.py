@@ -225,33 +225,41 @@ class superplt():
                 if relation.slope.n >= 0:  # 기울기가 양수일 때
                     if pos_leg == 'right':  # 범례가 오른쪽일 때
                         firstposy = minY + 0.9 * (maxY - minY)
-                        secondposy = minY + 0.8 * (maxY - minY)
-                        thirdposy = minY + 0.7 * (maxY - minY)
+                        secondposy = minY + 0.83 * (maxY - minY)
+                        thirdposy = minY + 0.76 * (maxY - minY)
+                        fourthposy = minY + 0.69 * (maxY - minY)
                         ax.text(minx, firstposy, r'$y=ax+b$', fontsize=10)
                         ax.text(minx, secondposy, 'a={:.2uP}'.format(relation.slope), fontsize=10)
                         ax.text(minx, thirdposy, 'b={:.2uP}'.format(relation.intercept), fontsize=10)
+                        ax.text(minx, fourthposy, '$R^2$={:.3f}'.format(relation.R2), fontsize=10)
                     else:  # 범례가 왼쪽일 때
-                        firstposy = minY + 0.3 * (maxY - minY)
-                        secondposy = minY + 0.2 * (maxY - minY)
-                        thirdposy = minY + 0.1 * (maxY - minY)
+                        firstposy = minY + 0.31 * (maxY - minY)
+                        secondposy = minY + 0.24 * (maxY - minY)
+                        thirdposy = minY + 0.17 * (maxY - minY)
+                        fourthposy = minY + 0.1 * (maxY - minY)
                         ax.text(posx, firstposy, r'$y=ax+b$', fontsize=10)
                         ax.text(posx, secondposy, 'a={:.2uP}'.format(relation.slope), fontsize=10)
                         ax.text(posx, thirdposy, 'b={:.2uP}'.format(relation.intercept), fontsize=10)
+                        ax.text(minx, fourthposy, '$R^2$={:.3f}'.format(relation.R2), fontsize=10)
                 else:  # 기울기가 음수일 때
                     if pos_leg == 'right':  # 범례가 오른쪽일 때
-                        firstposy = minY + 0.3 * (maxY - minY)
-                        secondposy = minY + 0.2 * (maxY - minY)
-                        thirdposy = minY + 0.1 * (maxY - minY)
+                        firstposy = minY + 0.31 * (maxY - minY)
+                        secondposy = minY + 0.24 * (maxY - minY)
+                        thirdposy = minY + 0.17 * (maxY - minY)
+                        fourthposy = minY + 0.1 * (maxY - minY)
                         ax.text(minx, firstposy, r'$y=ax+b$', fontsize=10)
                         ax.text(minx, secondposy, 'a={:.2uP}'.format(relation.slope), fontsize=10)
                         ax.text(minx, thirdposy, 'b={:.2uP}'.format(relation.intercept), fontsize=10)
+                        ax.text(minx, fourthposy, '$R^2$={:.3f}'.format(relation.R2), fontsize=10)
                     else:  # 범례가 왼쪽일 때
                         firstposy = minY + 0.9 * (maxY - minY)
-                        secondposy = minY + 0.8 * (maxY - minY)
-                        thirdposy = minY + 0.7 * (maxY - minY)
+                        secondposy = minY + 0.83 * (maxY - minY)
+                        thirdposy = minY + 0.76 * (maxY - minY)
+                        fourthposy = minY + 0.69 * (maxY - minY)
                         ax.text(posx, firstposy, r'$y=ax+b$', fontsize=10)
                         ax.text(posx, secondposy, 'a={:.2uP}'.format(relation.slope), fontsize=10)
                         ax.text(posx, thirdposy, 'b={:.2uP}'.format(relation.intercept), fontsize=10)
+                        ax.text(minx, fourthposy, '$R^2$={:.3f}'.format(relation.R2), fontsize=10)
 
         # Xlabel 작성
         if Label[0] == 'normal':
