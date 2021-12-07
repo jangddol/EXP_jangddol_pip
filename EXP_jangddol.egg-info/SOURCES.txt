@@ -5,6 +5,7 @@ EXP/RIC.py
 EXP/__init__.py
 EXP/exp.py
 EXP/exp_plot.py
+EXP/explorer.py
 EXP/linfit.py
 EXP/tutorial_korean.py
 EXP/uprint.py
