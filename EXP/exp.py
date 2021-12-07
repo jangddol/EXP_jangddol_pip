@@ -18,6 +18,7 @@ from .RIC import RememberInstanceCreationInfo
 
 from . import linfit
 from . import uprint
+from .explorer import Shvar_open
 
 
 UF = "<class 'uncertainties.core.Variable'>"
@@ -1376,3 +1377,7 @@ class Shvar(RememberInstanceCreationInfo):
             result.varname = tempvarname  # 이 부분은 백업 안되어있음 다음 버젼에 올리는 걸로.
             result.writeshvartext()
         return result
+    
+    
+    def showfile():
+        Shvar_open()
