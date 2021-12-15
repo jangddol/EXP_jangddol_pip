@@ -47,7 +47,7 @@ class superplt():
         TEXT = []
 
         # 작성 시간
-        renewTime = Time.replace(';', ':')
+        renewTime = Time.replace('-', ':')
         TEXT.append("Drew Time : " + renewTime)
 
         # 작성 변수

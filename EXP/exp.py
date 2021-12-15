@@ -885,8 +885,8 @@ class Shvar(RememberInstanceCreationInfo):
 
         Date_text = Year + '-' + Month + '-' + Day
         TitleMinute = Shvar.change_one_to_two_digits(str(30 * int(int(Minute) / 30)))
-        time_text = Hour + ';' + Minute + ';' + Second  # 그냥 현재 시간
-        Titletime_text = Hour + ';' + TitleMinute + ';' + '00'  # 30분 단위의 현재시간
+        time_text = Hour + '-' + Minute + '-' + Second  # 그냥 현재 시간
+        Titletime_text = Hour + '-' + TitleMinute + '-' + '00'  # 30분 단위의 현재시간
         return [Date_text, time_text, Titletime_text]
 
 
@@ -1127,7 +1127,7 @@ class Shvar(RememberInstanceCreationInfo):
         else:
             f = open(BaseDirectory + date + '/' + title + '.txt', 'w')
         
-        time = time.replace(';', ':')
+        time = time.replace('-', ':')
         
         for x in content:
             f.write(x + '\n')
@@ -1272,7 +1272,7 @@ class Shvar(RememberInstanceCreationInfo):
                 
                 Hour = Shvar.change_one_to_two_digits(str(Hour))
                 TitleMinute = Shvar.change_one_to_two_digits(str(TitleMinute))
-                Titletime = Hour + ';' + TitleMinute + ';00'
+                Titletime = Hour + '-' + TitleMinute + '-00'
                 
                 AvailableMinuteList = []
                 i = 0

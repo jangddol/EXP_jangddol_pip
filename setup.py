@@ -3,7 +3,7 @@ import setuptools
 
 setup(
       name='EXP_jangddol',
-      version='1.1.1',
+      version='1.1.4',
       url='https://github.com/jangddol/EXP_jangddol_pip.git',
       description='kawaii experiment data analysis tool',
       author='jangddol',
